@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Postchord</title>
+</head>
+<body>
+
+    <div>
+        <h3>{{song.title}}</h3>
+        <h3>{{song.artist}}</h3>
+    </div>
+
+    <form action="{% url 'song-posted' song.id %}" method="get">
+
+        {% csrf_token %}
+
+        <textarea name="chords" id="chords" cols="30" rows="10" >{{lyric}}</textarea>
+
+        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+
+        <button type="submit">Criar</button>
+
+    </form>
+
+
+
+</body>
+</html>

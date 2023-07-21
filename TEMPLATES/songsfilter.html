@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cifras filtradas</title>
+</head>
+
+<body>
+
+    <div class="cifras-filtradas">
+        {%for cifra in songs %}
+
+        <div class="cifra-filtrada" style="display:flex;">
+            <h3>{{cifra.title}}</h3>
+            <br>
+            <h4>{{cifra.artist}}</h4>
+        </div>
+
+        {%endfor%}
+    </div>
+
+</body>
+</html>

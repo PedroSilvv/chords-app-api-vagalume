@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Logim</title>
+
+</head>
+<body>
+
+    {%if messages%}
+        <div class="messages-box">
+            {%for message in messages%}
+                <h4>{{message}}</h4>
+            {%endfor%}
+        </div>
+    {% endif %}
+
+    <form action="{% url 'login' %}" method="post">
+
+        {% csrf_token %}
+
+        <fieldset>
+
+            <input type="text" name="username" id="username">
+
+            <input type="password" name="password" id="password">
+
+            <button type="submit">Logar</button>
+
+
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
